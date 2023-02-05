@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Responsive</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="container nav">
+      <div class="nav__logo">
+        <a href="#">Tushar</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#assignments" class="nav__link">Assignments</a>
+          </li>
+          <li class="nav__item">
+            <a href="#notes" class="nav__link">Notes</a>
+          </li>
+          <li class="nav__item">
+            <a href="#resources" class="nav__link">Resources</a>
+          </li>
+          <li class="nav__item">
+            <a href="#practical-files" class="nav__link">Practical Files</a>
+          </li>
+          <li class="nav__item">
+            <a href="#front-pages" class="nav__link">Front Pages</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-us" class="nav__link">About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-3-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section id="assignments" class="first-section">
+    <div class="container">
+      <h2 class="section__title">
+        Assignments
+      </h2>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="container">
+      <h2 class="section__title">
+        Notes
+      </h2>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="container">
+      <h2 class="section__title">
+        Resources
+      </h2>
+    </div>
+  </section>
+
+  <section id="practical-files">
+    <div class="container">
+      <h2 class="section__title">
+        Practical Files
+      </h2>
+    </div>
+  </section>
+
+  <section id="front-pages">
+    <div class="container">
+      <h2 class="section__title">
+        Front Pages
+      </h2>
+    </div>
+  </section>
+
+  <section id="about-us">
+    <div class="container">
+      <h2 class="section__title">
+        About Us
+      </h2>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section__title">
+        Contact Us
+      </h2>
+    </div>
+  </section>
+
+  <script>
+    //write js code here
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close')
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+      })
+    }
+
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+      })
+    }
+
+    const navLink = document.querySelectorAll('.nav__link');
+    const linkAction = () =>{
+      const navMenu = document.getElementById('nav-menu')
+      // When we click on each nav__link, we remove the show-menu class
+      navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
+  </script>
+</body>
+</html>

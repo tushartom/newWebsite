@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("../fonts/BrittanySignature-MaZx.woff")format("woff");
+}
+:root {
+  --clr-primary: #101010;
+  --clr-secondary: #F1F1F1;
+  --clr-grey: #F0F0F0;
+  --clr-white: #FFF;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-weight: 400;
+  padding-top: 3.5rem;
+}
+a {
+  text-decoration: none;
+  font: inherit;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1060px;
+  margin-inline: auto;
+  padding-inline: 1rem
+}
+
+.header {
+  background-color: var(--clr-secondary);
+  width: 100%;
+  /* background: transparent; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  
+}
+
+.nav__logo a {
+  font-family: "BrittanySignature", sans-serif;
+}
+
+.nav__menu {
+  height: 100%;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+.nav__toggle, .nav__close {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__close, .nav__toggle {
+    display: inline-block;
+  }
+
+  .nav__close {
+    color: var(--clr-white);
+  }
+
+  .nav__toggle {
+    font-size: 1.5rem;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    transition: .3s;
+    padding: 6rem 2rem 3.5rem;
+  }
+
+  .nav__close {
+    font-size: 2rem;
+    position: absolute;
+    top: 0.9rem;
+    right: 1.25rem;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    color: var(--clr-white);
+  }
+}
+
+
+.show-menu {
+  right: 0;
+}
+
+section {
+  height: 95vh;
+  padding-top: 5rem;
+}
+
+
+
+.section__title {
+  color: var(--clr-primary);
+  text-align: center;
+}
